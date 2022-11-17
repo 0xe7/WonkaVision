@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{832F7F0D-44E7-4DC4-BC17-F650C9C7AB7D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>WonkaVision</RootNamespace>
+    <AssemblyName>WonkaVision</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="dnMerge">
+      <HintPath>..\packages\dnMerge.0.5.15\tasks\net472\dnMerge.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cmds\Analyze.cs" />
+    <Compile Include="cmds\GenerateKeys.cs" />
+    <Compile Include="cmds\Dump.cs" />
+    <Compile Include="lib\Analysis\DetectionIOA.cs" />
+    <Compile Include="lib\Analysis\EncryptedDetections.cs" />
+    <Compile Include="lib\Analysis\Output.cs" />
+    <Compile Include="lib\Analysis\SessionDetections.cs" />
+    <Compile Include="lib\Analysis\SessionIOAs.cs" />
+    <Compile Include="lib\Analysis\TicketDetections.cs" />
+    <Compile Include="lib\Analysis\UnencryptedDetections.cs" />
+    <Compile Include="lib\Analyze.cs" />
+    <Compile Include="lib\ArgumentParser.cs" />
+    <Compile Include="lib\ArgumentParserResult.cs" />
+    <Compile Include="lib\Asn1\Asn1Extensions.cs" />
+    <Compile Include="lib\Asn1\AsnElt.cs" />
+    <Compile Include="lib\Asn1\AsnException.cs" />
+    <Compile Include="lib\Asn1\AsnIO.cs" />
+    <Compile Include="lib\Asn1\AsnOID.cs" />
+    <Compile Include="lib\Crypto.cs" />
+    <Compile Include="lib\DCSync.cs" />
+    <Compile Include="lib\Dump.cs" />
+    <Compile Include="lib\Globals.cs" />
+    <Compile Include="lib\Helpers.cs" />
+    <Compile Include="lib\Info.cs" />
+    <Compile Include="lib\Interop.cs" />
+    <Compile Include="lib\Interop\Luid.cs" />
+    <Compile Include="lib\Interop\NtException.cs" />
+    <Compile Include="lib\krb_structures\ADIfRelevant.cs" />
+    <Compile Include="lib\krb_structures\ADKerbLocal.cs" />
+    <Compile Include="lib\krb_structures\ADRestrictionEntry.cs" />
+    <Compile Include="lib\krb_structures\ADWin2KPac.cs" />
+    <Compile Include="lib\krb_structures\AuthorizationData.cs" />
+    <Compile Include="lib\krb_structures\Checksum.cs" />
+    <Compile Include="lib\krb_structures\EncKrbCredPart.cs" />
+    <Compile Include="lib\krb_structures\EncryptedData.cs" />
+    <Compile Include="lib\krb_structures\EncryptionKey.cs" />
+    <Compile Include="lib\krb_structures\EncTicketPart.cs" />
+    <Compile Include="lib\krb_structures\HostAddress.cs" />
+    <Compile Include="lib\krb_structures\KrbCredInfo.cs" />
+    <Compile Include="lib\krb_structures\KRB_CRED.cs" />
+    <Compile Include="lib\krb_structures\pac\Attributes.cs" />
+    <Compile Include="lib\krb_structures\pac\ClientName.cs" />
+    <Compile Include="lib\krb_structures\pac\LogonInfo.cs" />
+    <Compile Include="lib\krb_structures\pac\Ndr\Kerberos_PAC.cs" />
+    <Compile Include="lib\krb_structures\pac\PacCredentialInfo.cs" />
+    <Compile Include="lib\krb_structures\pac\PacInfoBuffer.cs" />
+    <Compile Include="lib\krb_structures\pac\PACTYPE.cs" />
+    <Compile Include="lib\krb_structures\pac\Requestor.cs" />
+    <Compile Include="lib\krb_structures\pac\S4UDelegationInfo.cs" />
+    <Compile Include="lib\krb_structures\pac\SignatureData.cs" />
+    <Compile Include="lib\krb_structures\pac\UpnDns.cs" />
+    <Compile Include="lib\krb_structures\PrincipalName.cs" />
+    <Compile Include="lib\krb_structures\Ticket.cs" />
+    <Compile Include="lib\krb_structures\TransitedEncoding.cs" />
+    <Compile Include="lib\LDAP.cs" />
+    <Compile Include="lib\LogonHours.cs" />
+    <Compile Include="lib\LSA.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\INdrConformantStructure.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\INdrNonEncapsulatedUnion.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\INdrStructure.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\NdrContextHandle.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\NdrDataRepresentation.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\NdrDeferralStack.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\NdrEmbeddedPointer.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\NdrEmpty.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\NdrEnum16.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\NdrInt3264.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\NdrInterfacePointer.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\NdrMarshalBuffer.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\NdrPickledType.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\NdrPipe.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\NdrUnmarshalBuffer.cs" />
+    <Compile Include="lib\Ndr\Ndr\Marshal\NdrUnsupported.cs" />
+    <Compile Include="lib\Ndr\Ndr\NdrNativeUtils.cs" />
+    <Compile Include="lib\Ndr\Ndr\NdrParser.cs" />
+    <Compile Include="lib\Ndr\Utilities\Memory\CrossBitnessTypeAttribute.cs" />
+    <Compile Include="lib\Ndr\Utilities\Memory\IMemoryReader.cs" />
+    <Compile Include="lib\Ndr\Utilities\Memory\SafeBufferWrapper.cs" />
+    <Compile Include="lib\Ndr\Utilities\Text\BinaryEncoding.cs" />
+    <Compile Include="lib\Ndr\Utilities\Text\HexDumpBuilder.cs" />
+    <Compile Include="lib\Ndr\Win32\Rpc\RpcUtils.cs" />
+    <Compile Include="lib\Policy.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Version.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\dnMerge.0.5.15\build\dnMerge.targets" Condition="Exists('..\packages\dnMerge.0.5.15\build\dnMerge.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\dnMerge.0.5.15\build\dnMerge.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\dnMerge.0.5.15\build\dnMerge.targets'))" />
+  </Target>
+</Project>
