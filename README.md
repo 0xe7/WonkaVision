@@ -202,7 +202,7 @@ As it was only a minimal POC most of the indicators that were implemented were t
 * Will Schroeder (@harmj0y) for [Rubeus](https://github.com/GhostPack/Rubeus) code base
 * Vincent Le Toux (@mysmartlogon) for '[Make Me Enterprise Admin](https://github.com/vletoux/MakeMeEnterpriseAdmin)' code base
 * Jared Atkinson (@jaredcatkinson) for '[Get-KerberosTicketGrantingTicket.ps1](https://gist.github.com/jaredcatkinson/c95fd1e4e76a4b9b966861f64782f5a9#file-get-kerberosticketgrantingticket-ps1)' & '[Test-KerberosTicketGrantingTicket.ps1](https://gist.github.com/jaredcatkinson/c95fd1e4e76a4b9b966861f64782f5a9#file-test-kerberosticketgrantingticket-ps1)' code base
-* Jonathn Johnson (@jsecurity101) for help in troubleshooting a DCSync error :), POC Testing, Microsoft Sentinel testing & advice/guidnace on writing to the Windows Event log
+* Jonathan Johnson (@jsecurity101) for help in troubleshooting a DCSync error :), POC Testing, Microsoft Sentinel testing & advice/guidnace on writing to the Windows Event log
 * Elad Shamir (@elad_shamir) for advice/guidnace
 * The 'sisoc-tokyo' team (The University of Tokyo, Wataru Matsuda, Mariko Fujimoto, & Takuho Mitsunaga) who presented '[Real-time detection of attacks leveraging Domain Administrator privilege](https://i.blackhat.com/eu-18/Wed-Dec-5/eu-18-Matsuda-Real-time-Detection-of-Attacks-Leveraging-Domain-Administrator-Privilege.pdf)' at BlackHat Europe 2018 whose work we found post POC. Their project can can be found [here](https://github.com/sisoc-tokyo/Real-timeDetectionAD_ver2) 
 * Semperis (@SemperisTech) & Trustedsec (@TrustedSec) for allowing us to complete this project
