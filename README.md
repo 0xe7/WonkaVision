@@ -3,7 +3,7 @@
 
 WonkaVision is a proof of concept (POC) tool to analyze Kerberos tickets and attempt to determine if they are forged. This tool was created by [Charlie Clark](https://twitter.com/exploitph) and [Andrew Schwartz](https://twitter.com/4ndr3w6s).
 
-**It should be noted that this POC is not intended to be a production-ready enterprise application, but rather to generate ideas on how to better detect forged tickets while publicising discovered IOAs.**
+**It should be noted that this POC is not intended to be a production-ready enterprise application, but rather to generate ideas on how to better detect forged tickets while publicizing discovered IOAs.**
 
 [Charlie Clark](https://twitter.com/exploitph) is the primary author of this code base.
 
@@ -15,7 +15,7 @@ It has 3 functions:
 * `/dump` - To be run on servers/workstations, dumps session data with associated Kerberos tickets
 * `/analyze` - Run against a directory containing all of the dump files, analyzes all sessions and tickets within the dumps, generates scores and writes to the event log
 
-WonkaVision has the following dependancies:
+WonkaVision has the following dependencies:
 
 * Newtonsoft.Json - For serializing/deserializing json objects
 * dnMerge - For merging the Newtonsoft.Json DLL into a single binary for easier deployment when dumping tickets
@@ -31,7 +31,7 @@ WonkaVision is licensed under the BSD 3-Clause license.
   - [Dump](#dump)
   - [Analyze](#analyze)
      -  [Event Log Sample](#event-log-sample)
-     -  [SIEM Log Forwarding Sample](#siem-forwarding-sample)
+     -  [SIEM Log Forwarding Sample](#siem-log-forwarding-sample)
         -  [Example with Splunk](#example-with-splunk)
         -  [Example with Sentinel](#example-with-sentinel)
 - [Talk Demos](#talk-demos)
@@ -194,7 +194,7 @@ https://user-images.githubusercontent.com/13423848/202442125-822cc4a4-1c87-447f-
 
 ## KrbSniffer POC
 
-The Kerberos Traffic Sniffer POC that we demonstrated in our talk ([Demo 4](media/Demo%20Videos/Demo%204%20-%20Kerberos%20Sniffer.mp4)) was implemented with [SharpPCap](https://github.com/dotpcap/sharppcap) but could easily be modified to use raw sockets, removing that dependancy as well as the need for installing [npcap](https://npcap.com/) on the system. 
+The Kerberos Traffic Sniffer POC that we demonstrated in our talk ([Demo 4](media/Demo%20Videos/Demo%204%20-%20Kerberos%20Sniffer.mp4)) was implemented with [SharpPCap](https://github.com/dotpcap/sharppcap) but could easily be modified to use raw sockets, removing that dependency as well as the need for installing [npcap](https://npcap.com/) on the system. 
 
 As it was only a minimal POC most of the indicators that were implemented were the unencrypted indicators mentioned in Charlie's YASCON 2020 talk detailed on slide 18 of [this slide deck](https://github.com/0xe7/Talks/blob/main/Inspecting%20Kerberos%20Ticket%20Requests%20v1.pdf), although many more could be implemented.
 
@@ -202,8 +202,8 @@ As it was only a minimal POC most of the indicators that were implemented were t
 * Will Schroeder (@harmj0y) for [Rubeus](https://github.com/GhostPack/Rubeus) code base
 * Vincent Le Toux (@mysmartlogon) for '[Make Me Enterprise Admin](https://github.com/vletoux/MakeMeEnterpriseAdmin)' code base
 * Jared Atkinson (@jaredcatkinson) for '[Get-KerberosTicketGrantingTicket.ps1](https://gist.github.com/jaredcatkinson/c95fd1e4e76a4b9b966861f64782f5a9#file-get-kerberosticketgrantingticket-ps1)' & '[Test-KerberosTicketGrantingTicket.ps1](https://gist.github.com/jaredcatkinson/c95fd1e4e76a4b9b966861f64782f5a9#file-test-kerberosticketgrantingticket-ps1)' code base
-* Jonathan Johnson (@jsecurity101) for help in troubleshooting a DCSync error :), POC Testing, Microsoft Sentinel testing & advice/guidnace on writing to the Windows Event log
-* Elad Shamir (@elad_shamir) for advice/guidnace
+* Jonathan Johnson (@jsecurity101) for help in troubleshooting a DCSync error :), POC Testing, Microsoft Sentinel testing & advice/guidance on writing to the Windows Event log
+* Elad Shamir (@elad_shamir) for advice/guidance
 * The 'sisoc-tokyo' team (The University of Tokyo, Wataru Matsuda, Mariko Fujimoto, & Takuho Mitsunaga) who presented '[Real-time detection of attacks leveraging Domain Administrator privilege](https://i.blackhat.com/eu-18/Wed-Dec-5/eu-18-Matsuda-Real-time-Detection-of-Attacks-Leveraging-Domain-Administrator-Privilege.pdf)' at BlackHat Europe 2018 whose work we found post POC. Their project can can be found [here](https://github.com/sisoc-tokyo/Real-timeDetectionAD_ver2) 
 * Semperis (@SemperisTech) & Trustedsec (@TrustedSec) for allowing us to complete this project
 
